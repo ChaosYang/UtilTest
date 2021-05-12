@@ -10,6 +10,7 @@
 #import "NSString+VTRegexp.h"
 #import "RuntimeUtils.h"
 #import "UIView+Additional.h"
+#import "UIDevice+Additional.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
 @interface ViewController ()
@@ -24,10 +25,10 @@
     
 //    [RuntimeUtils getAllIVars:[UIAlertAction class]];
 //    [RuntimeUtils getAllIVars:[UIAlertController class]];
-    [RuntimeUtils getAllIVars:[CBPeripheral class]];
+//    [RuntimeUtils getAllIVars:[CBPeripheral class]];
+    NSLog(@"%d", [UIDevice currentDevice].isIphoneX);
+    NSLog(@"%d", [UIDevice currentDevice].isIphoneX);
     
-    [self.view setSize:CGSizeMake(200, 300)];
-    NSLog(@"%@", NSStringFromCGSize(self.view.size));
 }
 
 - (void)viewDidAppear:(BOOL)animated{

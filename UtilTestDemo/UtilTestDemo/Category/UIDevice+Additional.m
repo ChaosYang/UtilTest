@@ -1,11 +1,11 @@
 //
-//  RootUtils.m
+//  UIDevice+Additional.m
 //  UtilTestDemo
 //
-//  Created by yangweichao on 2021/5/6.
+//  Created by yangweichao on 2021/5/12.
 //
 
-#import "RootUtils.h"
+#import "UIDevice+Additional.h"
 #import <sys/stat.h>
 #import <dlfcn.h>
 #import <mach-o/dyld.h>
@@ -14,23 +14,52 @@
 #import <ifaddrs.h>
 #import <arpa/inet.h>
 #import <net/if.h>
-#import <UIKit/UIApplication.h>
 
-@implementation RootUtils
+@implementation UIDevice (Additional)
 
-+ (BOOL)checkRootIsJailBreak{
-    return [[RootUtils alloc] isJailBreak];
+- (BOOL)isIphoneX{
+    static BOOL iphoneX;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (@available(iOS 11.0, *)) { // 仅对于系统版本11及以上
+            UIEdgeInsets safeEdgeInsets;
+            if ((NSClassFromString(@"SceneDelegate")) != nil) { // 场景存在的情况下 delegate默认不存在window
+                safeEdgeInsets = [[[UIApplication sharedApplication] windows].firstObject safeAreaInsets];
+            }else {
+                safeEdgeInsets = [[[[UIApplication sharedApplication] delegate] window] safeAreaInsets];
+            }
+            if (safeEdgeInsets.bottom > 0.0) {
+                iphoneX = YES;
+            }else{
+                iphoneX = NO;
+            }
+            return;
+        }
+        // 通用
+        BOOL isIphone = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone;
+        CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+        CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+        CGFloat height = MAX(screenHeight, screenWidth);
+        iphoneX = (isIphone && (height >= 812.0));
+    });
+    return iphoneX;
 }
 
+
 - (BOOL)isJailBreak{
-    if ([self isJailBreakFirst]
-        || [self isJailBreakSecond]
-        || [self isJailBreakThird]
-        || [self isJailBreakFourth]
-        || checkCydia()) {
-        return YES;
-    }
-    return NO;
+    static BOOL jailBreak;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if ([self isJailBreakFirst]
+            || [self isJailBreakSecond]
+            || [self isJailBreakThird]
+            || [self isJailBreakFourth]
+            || checkCydia()) {
+            jailBreak = YES;
+        }
+        jailBreak = NO;
+    });
+    return jailBreak;
 }
 
 
@@ -101,5 +130,23 @@ char* printEnv(void) {
     return NO;
 }
 
+
+- (BOOL)isSimulator{
+#if TARGET_OS_SIMULATOR
+    return YES;
+#else
+    return NO;
+#endif
+}
+
+
+- (BOOL)isIpad{
+    static BOOL ipad;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        ipad = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
+    });
+    return ipad;
+}
 
 @end

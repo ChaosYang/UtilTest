@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		650467142643D1DD00B1FEEA /* NSObject+VTKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 650467132643D1DD00B1FEEA /* NSObject+VTKVO.m */; };
-		650467172643D42100B1FEEA /* RootUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 650467162643D42100B1FEEA /* RootUtils.m */; };
 		6504671A2644D9BA00B1FEEA /* UIImage+QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 650467192644D9BA00B1FEEA /* UIImage+QRCode.m */; };
 		6504671F264A75B700B1FEEA /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504671E264A75B700B1FEEA /* UIView+Additional.m */; };
+		6504672B264B81DE00B1FEEA /* UIDevice+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504672A264B81DE00B1FEEA /* UIDevice+Additional.m */; };
 		65F8F0F826300AD900E2A6DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8F0F726300AD900E2A6DD /* AppDelegate.m */; };
 		65F8F0FB26300AD900E2A6DD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8F0FA26300AD900E2A6DD /* SceneDelegate.m */; };
 		65F8F0FE26300AD900E2A6DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8F0FD26300AD900E2A6DD /* ViewController.m */; };
@@ -46,12 +46,12 @@
 /* Begin PBXFileReference section */
 		650467122643D1DD00B1FEEA /* NSObject+VTKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+VTKVO.h"; sourceTree = "<group>"; };
 		650467132643D1DD00B1FEEA /* NSObject+VTKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VTKVO.m"; sourceTree = "<group>"; };
-		650467152643D42100B1FEEA /* RootUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootUtils.h; sourceTree = "<group>"; };
-		650467162643D42100B1FEEA /* RootUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootUtils.m; sourceTree = "<group>"; };
 		650467182644D9BA00B1FEEA /* UIImage+QRCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+QRCode.h"; sourceTree = "<group>"; };
 		650467192644D9BA00B1FEEA /* UIImage+QRCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QRCode.m"; sourceTree = "<group>"; };
 		6504671D264A75B700B1FEEA /* UIView+Additional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Additional.h"; sourceTree = "<group>"; };
 		6504671E264A75B700B1FEEA /* UIView+Additional.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
+		65046729264B81DE00B1FEEA /* UIDevice+Additional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Additional.h"; sourceTree = "<group>"; };
+		6504672A264B81DE00B1FEEA /* UIDevice+Additional.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Additional.m"; sourceTree = "<group>"; };
 		65F8F0F326300AD900E2A6DD /* UtilTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UtilTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F8F0F626300AD900E2A6DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65F8F0F726300AD900E2A6DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -178,6 +178,8 @@
 				650467192644D9BA00B1FEEA /* UIImage+QRCode.m */,
 				6504671D264A75B700B1FEEA /* UIView+Additional.h */,
 				6504671E264A75B700B1FEEA /* UIView+Additional.m */,
+				65046729264B81DE00B1FEEA /* UIDevice+Additional.h */,
+				6504672A264B81DE00B1FEEA /* UIDevice+Additional.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -187,8 +189,6 @@
 			children = (
 				65F8F137263019F700E2A6DD /* RuntimeUtils.h */,
 				65F8F138263019F700E2A6DD /* RuntimeUtils.m */,
-				650467152643D42100B1FEEA /* RootUtils.h */,
-				650467162643D42100B1FEEA /* RootUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -323,8 +323,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				65F8F1512634FB1B00E2A6DD /* UIColor+VTColor.m in Sources */,
-				650467172643D42100B1FEEA /* RootUtils.m in Sources */,
 				65F8F0FE26300AD900E2A6DD /* ViewController.m in Sources */,
+				6504672B264B81DE00B1FEEA /* UIDevice+Additional.m in Sources */,
 				65F8F139263019F700E2A6DD /* RuntimeUtils.m in Sources */,
 				65F8F0F826300AD900E2A6DD /* AppDelegate.m in Sources */,
 				65F8F10926300ADA00E2A6DD /* main.m in Sources */,

@@ -7,6 +7,7 @@
 
 #import <XCTest/XCTest.h>
 #import "NSString+VTRegexp.h"
+#import "UIView+Additional.h"
 
 @interface UtilTestDemoTests : XCTestCase
 
@@ -41,6 +42,13 @@
     NSString *str = @"20200229122223";
     BOOL des = [str isValidDateTime:VTDateFormatDefault];
     XCTAssert(des, @"%@ is invalid date", str);
+}
+
+- (void)testViewAdditional{
+    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    [v setTop:20];
+    XCTAssert(v.frame.origin.y==20, @"top set failed");
+    
 }
 
 - (void)testPerformanceExample {
