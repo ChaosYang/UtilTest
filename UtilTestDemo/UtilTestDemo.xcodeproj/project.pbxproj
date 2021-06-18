@@ -24,6 +24,7 @@
 		65F8F139263019F700E2A6DD /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8F138263019F700E2A6DD /* RuntimeUtils.m */; };
 		65F8F1512634FB1B00E2A6DD /* UIColor+VTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8F1502634FB1B00E2A6DD /* UIColor+VTColor.m */; };
 		65F8F1662636B2FA00E2A6DD /* NSString+VTRegexp.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8F1652636B2FA00E2A6DD /* NSString+VTRegexp.m */; };
+		65FD5676267C2DBA0019D5F7 /* NSData+XorEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FD5674267C2DBA0019D5F7 /* NSData+XorEncrypt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		65F8F1502634FB1B00E2A6DD /* UIColor+VTColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+VTColor.m"; sourceTree = "<group>"; };
 		65F8F1642636B2FA00E2A6DD /* NSString+VTRegexp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+VTRegexp.h"; sourceTree = "<group>"; };
 		65F8F1652636B2FA00E2A6DD /* NSString+VTRegexp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+VTRegexp.m"; sourceTree = "<group>"; };
+		65FD5674267C2DBA0019D5F7 /* NSData+XorEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+XorEncrypt.m"; sourceTree = "<group>"; };
+		65FD5675267C2DBA0019D5F7 /* NSData+XorEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+XorEncrypt.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 				6504671E264A75B700B1FEEA /* UIView+Additional.m */,
 				65046729264B81DE00B1FEEA /* UIDevice+Additional.h */,
 				6504672A264B81DE00B1FEEA /* UIDevice+Additional.m */,
+				65FD5675267C2DBA0019D5F7 /* NSData+XorEncrypt.h */,
+				65FD5674267C2DBA0019D5F7 /* NSData+XorEncrypt.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 				6504671F264A75B700B1FEEA /* UIView+Additional.m in Sources */,
 				6504671A2644D9BA00B1FEEA /* UIImage+QRCode.m in Sources */,
 				65F8F0FB26300AD900E2A6DD /* SceneDelegate.m in Sources */,
+				65FD5676267C2DBA0019D5F7 /* NSData+XorEncrypt.m in Sources */,
 				65F8F1662636B2FA00E2A6DD /* NSString+VTRegexp.m in Sources */,
 				65F8F13626300BB800E2A6DD /* UIAlertController+VTAlert.m in Sources */,
 			);
