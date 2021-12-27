@@ -149,4 +149,13 @@ char* printEnv(void) {
     return ipad;
 }
 
+- (CGFloat)ptPerMm{
+    static CGFloat pt = 0.0;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+    });
+    return pt;
+}
+
 @end

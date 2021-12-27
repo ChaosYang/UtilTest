@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @brief 是否是ipad
 @property (nonatomic, readonly) BOOL isIpad;
 
+/// @brief 每mm对应的pt数量
+@property (nonatomic, readonly) CGFloat ptPerMm;
+
 @end
 
 NS_ASSUME_NONNULL_END

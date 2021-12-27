@@ -1,19 +1,19 @@
 //
-//  RuntimeUtils.m
+//  NSObject+Additional.m
 //  UtilTestDemo
 //
-//  Created by yangweichao on 2021/4/21.
+//  Created by yangweichao on 2021/9/3.
 //
 
-#import "RuntimeUtils.h"
+#import "NSObject+Additional.h"
 #import <objc/runtime.h>
 
-@implementation RuntimeUtils
+@implementation NSObject (Additional)
 
-+ (NSArray *)getAllPropertys:(Class)target{
++ (NSArray *)getAllPropertys{
     // 获取当前类的所有属性
     unsigned int count;// 记录属性个数
-    objc_property_t *properties = class_copyPropertyList(target, &count);
+    objc_property_t *properties = class_copyPropertyList(self, &count);
     // 遍历
     NSMutableArray *mArray = [NSMutableArray array];
     for (int i = 0; i < count; i++) {
@@ -30,10 +30,10 @@
     return mArray.copy;
 }
 
-+ (NSArray <NSDictionary *>*)getAllIVars:(Class)target{
++ (NSArray <NSDictionary *>*)getAllIVars{
     u_int count = 0;
     //获取指定类的Ivar列表及Ivar个数
-    Ivar *member = class_copyIvarList(target, &count);
+    Ivar *member = class_copyIvarList(self, &count);
     NSMutableArray *mArray = [NSMutableArray array];
     for (int i = 0; i < count; i ++) {
         Ivar var = member[i];
@@ -46,5 +46,6 @@
     }
     return mArray;
 }
+
 
 @end

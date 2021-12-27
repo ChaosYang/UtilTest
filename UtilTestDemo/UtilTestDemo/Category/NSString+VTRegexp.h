@@ -13,6 +13,11 @@ typedef enum : NSUInteger {
     VTDateFormatValue2,  // yyyy/MM/dd HH:mm:ss
 } VTDateFormat;
 
+typedef enum : NSUInteger {
+    VTIdentityLevelNormal,  // 基本校验
+    VTIdentityLevelPrecise, // 精准校验
+} VTIdentityLevel;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (VTRegexp)
@@ -34,6 +39,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// @brief 判断是否是要求的日期格式  日期分隔符可以是/ - . _ 或者没有 ； 时间分割符为: 或者没有  yyyy MM  dd HH mm ss
 - (BOOL)isValidDateTime:(VTDateFormat)format;
+
+/// @brief 判断是否为精准的身份证信息
+- (BOOL)isValidIdentityNumber:(VTIdentityLevel)level;
 
 /// @brief 匹配正则
 /// @param regex  正则字符串
