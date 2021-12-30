@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) BOOL isIpad;
 
 /// @brief 每mm对应的pt数量
-@property (nonatomic, readonly) CGFloat ptPerMm;
+@property (nonatomic, readonly) CGFloat ptPer_mm;
 
 @end
 
