@@ -14,8 +14,10 @@
 #import <ifaddrs.h>
 #import <arpa/inet.h>
 #import <net/if.h>
+#import <sys/utsname.h>
 
 @implementation UIDevice (Additional)
+
 
 - (BOOL)isIphoneX{
     static BOOL iphoneX;
@@ -261,6 +263,5 @@ char* printEnv(void) {
     }
     return NO;
 }
-
 
 @end
