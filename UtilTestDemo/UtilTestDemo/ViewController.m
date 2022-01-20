@@ -8,12 +8,16 @@
 #import "ViewController.h"
 #import "UIAlertController+VTAlert.h"
 #import "NSString+VTRegexp.h"
-#import "RuntimeUtils.h"
+//#import "RuntimeUtils.h"
 #import "UIView+Additional.h"
 #import "UIDevice+Additional.h"
 #import <CoreBluetooth/CoreBluetooth.h>
+#import "UIImage+Bitmap.h"
+
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *testImgView;
 
 @end
 
@@ -26,8 +30,13 @@
 //    [RuntimeUtils getAllIVars:[UIAlertAction class]];
 //    [RuntimeUtils getAllIVars:[UIAlertController class]];
 //    [RuntimeUtils getAllIVars:[CBPeripheral class]];
-    NSLog(@"%d", [UIDevice currentDevice].isIphoneX);
-    NSLog(@"%d", [UIDevice currentDevice].isIphoneX);
+    UIImage *image = [UIImage grayBitmapFromText:@"烟味"];
+    _testImgView.image = image;
+    
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(imageSavedToPhotosAlbum:didFinishSavingWithError:contextInfo:), nil);
+}
+
+- (void)imageSavedToPhotosAlbum:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
     
 }
 
