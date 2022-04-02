@@ -15,6 +15,7 @@
 #import "UIImage+Bitmap.h"
 
 #import <AVFoundation/AVFoundation.h>
+#import "CSServiceUtils.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *testImgView;
@@ -26,14 +27,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor greenColor];
+//    UIImage *image = [UIImage grayBitmapFromText:@"烟味"];
+//    _testImgView.image = image;
+////    image = [UIImage imageNamed:@"1642645002798.bmp"];
+//    NSData *data = [image bitmapData];
+////    UIImage *img = [UIImage imageWithData:data];
+//    UIImageWriteToSavedPhotosAlbum(image, self, @selector(imageSavedToPhotosAlbum:didFinishSavingWithError:contextInfo:), nil);
     
-//    [RuntimeUtils getAllIVars:[UIAlertAction class]];
-//    [RuntimeUtils getAllIVars:[UIAlertController class]];
-//    [RuntimeUtils getAllIVars:[CBPeripheral class]];
-    UIImage *image = [UIImage grayBitmapFromText:@"烟味"];
-    _testImgView.image = image;
+//    CGImageRef imgRef =
+//    UIImage *newImage = [UIImage imageWithData:data];
+//
+//    _testImgView.image = newImage;
     
-    UIImageWriteToSavedPhotosAlbum(image, self, @selector(imageSavedToPhotosAlbum:didFinishSavingWithError:contextInfo:), nil);
+    CSServiceUtils *utl = [[CSServiceUtils alloc] init];
+    
+    [utl startAlertVibrateAndSound];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [utl stopAlertVibrateAndSound];
+    });
+    
+    
 }
 
 - (void)imageSavedToPhotosAlbum:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{

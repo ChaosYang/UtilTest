@@ -12,7 +12,10 @@
 		6504671F264A75B700B1FEEA /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504671E264A75B700B1FEEA /* UIView+Additional.m */; };
 		6504672B264B81DE00B1FEEA /* UIDevice+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 6504672A264B81DE00B1FEEA /* UIDevice+Additional.m */; };
 		6522029026E21D0300AC71B1 /* NSObject+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 6522028F26E21D0300AC71B1 /* NSObject+Additional.m */; };
+		652579E627BDF7150028C265 /* CSServiceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 652579E527BDF7150028C265 /* CSServiceUtils.m */; };
+		652579E827BDFC9E0028C265 /* Alert.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 652579E727BDFC9E0028C265 /* Alert.mp3 */; };
 		657A3ECF26CF3A88000D57B3 /* AuthoryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 657A3ECE26CF3A88000D57B3 /* AuthoryUtils.m */; };
+		65C91E79279945B1003D5155 /* 1642645002798.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 65C91E78279945B1003D5155 /* 1642645002798.bmp */; };
 		65F8F0F826300AD900E2A6DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8F0F726300AD900E2A6DD /* AppDelegate.m */; };
 		65F8F0FB26300AD900E2A6DD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8F0FA26300AD900E2A6DD /* SceneDelegate.m */; };
 		65F8F0FE26300AD900E2A6DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8F0FD26300AD900E2A6DD /* ViewController.m */; };
@@ -58,8 +61,12 @@
 		6504672A264B81DE00B1FEEA /* UIDevice+Additional.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Additional.m"; sourceTree = "<group>"; };
 		6522028E26E21D0300AC71B1 /* NSObject+Additional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Additional.h"; sourceTree = "<group>"; };
 		6522028F26E21D0300AC71B1 /* NSObject+Additional.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additional.m"; sourceTree = "<group>"; };
+		652579E427BDF7150028C265 /* CSServiceUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSServiceUtils.h; sourceTree = "<group>"; };
+		652579E527BDF7150028C265 /* CSServiceUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSServiceUtils.m; sourceTree = "<group>"; };
+		652579E727BDFC9E0028C265 /* Alert.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Alert.mp3; sourceTree = "<group>"; };
 		657A3ECD26CF3A88000D57B3 /* AuthoryUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthoryUtils.h; sourceTree = "<group>"; };
 		657A3ECE26CF3A88000D57B3 /* AuthoryUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthoryUtils.m; sourceTree = "<group>"; };
+		65C91E78279945B1003D5155 /* 1642645002798.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 1642645002798.bmp; sourceTree = "<group>"; };
 		65F8F0F326300AD900E2A6DD /* UtilTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UtilTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F8F0F626300AD900E2A6DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65F8F0F726300AD900E2A6DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -151,6 +158,8 @@
 				65F8F10226300ADA00E2A6DD /* Assets.xcassets */,
 				65F8F10426300ADA00E2A6DD /* LaunchScreen.storyboard */,
 				65F8F10726300ADA00E2A6DD /* Info.plist */,
+				65C91E78279945B1003D5155 /* 1642645002798.bmp */,
+				652579E727BDFC9E0028C265 /* Alert.mp3 */,
 				6BC863CE2798FC1500481C38 /* MSYH.ttf */,
 				65F8F10826300ADA00E2A6DD /* main.m */,
 			);
@@ -207,6 +216,8 @@
 			children = (
 				657A3ECD26CF3A88000D57B3 /* AuthoryUtils.h */,
 				657A3ECE26CF3A88000D57B3 /* AuthoryUtils.m */,
+				652579E427BDF7150028C265 /* CSServiceUtils.h */,
+				652579E527BDF7150028C265 /* CSServiceUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -315,6 +326,8 @@
 			files = (
 				65F8F10626300ADA00E2A6DD /* LaunchScreen.storyboard in Resources */,
 				6BC863CF2798FC1500481C38 /* MSYH.ttf in Resources */,
+				65C91E79279945B1003D5155 /* 1642645002798.bmp in Resources */,
+				652579E827BDFC9E0028C265 /* Alert.mp3 in Resources */,
 				65F8F10326300ADA00E2A6DD /* Assets.xcassets in Resources */,
 				65F8F10126300AD900E2A6DD /* Main.storyboard in Resources */,
 			);
@@ -344,6 +357,7 @@
 				65F8F1512634FB1B00E2A6DD /* UIColor+VTColor.m in Sources */,
 				65F8F0FE26300AD900E2A6DD /* ViewController.m in Sources */,
 				657A3ECF26CF3A88000D57B3 /* AuthoryUtils.m in Sources */,
+				652579E627BDF7150028C265 /* CSServiceUtils.m in Sources */,
 				6504672B264B81DE00B1FEEA /* UIDevice+Additional.m in Sources */,
 				6522029026E21D0300AC71B1 /* NSObject+Additional.m in Sources */,
 				65F8F0F826300AD900E2A6DD /* AppDelegate.m in Sources */,
