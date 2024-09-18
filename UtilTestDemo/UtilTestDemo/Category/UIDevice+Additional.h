@@ -27,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @author viatom-chensihua
 @property (nonatomic, readonly) CGFloat ptPer_mm;
 
+/// @brief 状态栏高度
+@property (nonatomic, readonly) double statusBarHeight;
+
 @end
 
 NS_ASSUME_NONNULL_END

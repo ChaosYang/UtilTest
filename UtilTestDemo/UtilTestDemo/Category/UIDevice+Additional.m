@@ -206,6 +206,16 @@ char* printEnv(void) {
     //        sc_s = 5.5;
             // 使用模拟器微调
             sc_s = 5.526;
+        } else if (ff == 2556) {    // iPhone 14 Pro
+            // 使用官方给的参数，无实测
+            sc_s = 6.12;
+        } else if (ff == 2796) {    // iPhone 14 Pro Max
+            // 使用官方给的参数，无实测
+            sc_s = 6.69;
+        } else if (ff == 2868) { // iphone 16 pro max
+            sc_s = 6.88;
+        } else if (ff == 2622) {
+            sc_s = 6.3;
         }
         // ---------- iPad 端 ---------------------------------------
         else if (ff == 2266) {  // iPad Mini (6th gen)
@@ -237,7 +247,7 @@ char* printEnv(void) {
             sc_s = 6.7;
         }
         
-        //1mm米的像素点
+        // 1mm米的像素点
         double pmm = sqrt(sc_w * sc_w + sc_h * sc_h)/(sc_s * 25.39999918);//mm
         pt = pmm;
     });
@@ -262,6 +272,25 @@ char* printEnv(void) {
         return YES;
     }
     return NO;
+}
+
+- (double)statusBarHeight {
+    static double height = 0.0;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (@available(iOS 11.0, *)) { // 仅对于系统版本11及以上
+            UIEdgeInsets safeEdgeInsets;
+            if ((NSClassFromString(@"SceneDelegate")) != nil) { // 场景存在的情况下 delegate默认不存在window
+                safeEdgeInsets = [[[UIApplication sharedApplication] windows].firstObject safeAreaInsets];
+            }else {
+                safeEdgeInsets = [[[[UIApplication sharedApplication] delegate] window] safeAreaInsets];
+            }
+            height = safeEdgeInsets.top;
+        } else {
+            height = self.isIphoneX ? 44: 20;
+        }
+    });
+    return height;
 }
 
 @end

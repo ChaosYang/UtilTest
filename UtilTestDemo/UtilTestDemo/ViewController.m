@@ -27,26 +27,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor greenColor];
+//    self.view.backgroundColor = [UIColor greenColor];
 //    UIImage *image = [UIImage grayBitmapFromText:@"烟味"];
+//    [image binarization];
 //    _testImgView.image = image;
 ////    image = [UIImage imageNamed:@"1642645002798.bmp"];
 //    NSData *data = [image bitmapData];
 ////    UIImage *img = [UIImage imageWithData:data];
 //    UIImageWriteToSavedPhotosAlbum(image, self, @selector(imageSavedToPhotosAlbum:didFinishSavingWithError:contextInfo:), nil);
+
+    [UIDevice currentDevice].ptPer_mm;
     
-//    CGImageRef imgRef =
-//    UIImage *newImage = [UIImage imageWithData:data];
-//
-//    _testImgView.image = newImage;
-    
-    CSServiceUtils *utl = [[CSServiceUtils alloc] init];
-    
-    [utl startAlertVibrateAndSound];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [utl stopAlertVibrateAndSound];
-    });
-    
+}
+
+- (void)task:(int)idx {
+    NSLog(@"%d", idx);
     
 }
 

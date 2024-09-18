@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIImage (Bitmap)
 + (instancetype)grayBitmapFromText:(NSString *)text;
 
+- (NSData *)binarization;
 @end
 
 NS_ASSUME_NONNULL_END

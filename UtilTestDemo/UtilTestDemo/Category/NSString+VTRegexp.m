@@ -10,6 +10,7 @@
 @implementation NSString (VTRegexp)
 
 static NSString * const vtNumberRegexp = @"^[0-9]+$";
+static NSString * const vtDotnumberRegexp = @"(^[0]|^[1-9][0-9]*)([.]{1}[0-9]*){0,1}$";
 static NSString * const vtEmailRegexp = @"^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$";
 static NSString * const vtPhoneRegexp = @"^1(3\\d|4[5-9]|5[0-35-9]|6[567]|7[0-8]|8\\d|9[0-35-9])\\d{8}$";
 static NSString * const vtChineseRegexp = @"^[\u4e00-\u9fa5]{0,}$";
