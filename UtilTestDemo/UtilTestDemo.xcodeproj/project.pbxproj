@@ -27,7 +27,7 @@
 		65F8F13626300BB800E2A6DD /* UIAlertController+VTAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8F13426300BB800E2A6DD /* UIAlertController+VTAlert.m */; };
 		65F8F1512634FB1B00E2A6DD /* UIColor+VTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8F1502634FB1B00E2A6DD /* UIColor+VTColor.m */; };
 		65F8F1662636B2FA00E2A6DD /* NSString+VTRegexp.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8F1652636B2FA00E2A6DD /* NSString+VTRegexp.m */; };
-		65FD5676267C2DBA0019D5F7 /* NSData+XorEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FD5674267C2DBA0019D5F7 /* NSData+XorEncrypt.m */; };
+		65FD5676267C2DBA0019D5F7 /* NSData+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FD5674267C2DBA0019D5F7 /* NSData+Encrypt.m */; };
 		6BC863CD2798EE3100481C38 /* UIImage+Bitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC863CC2798EE3100481C38 /* UIImage+Bitmap.m */; };
 		6BC863CF2798FC1500481C38 /* MSYH.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BC863CE2798FC1500481C38 /* MSYH.ttf */; };
 /* End PBXBuildFile section */
@@ -89,8 +89,8 @@
 		65F8F1502634FB1B00E2A6DD /* UIColor+VTColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+VTColor.m"; sourceTree = "<group>"; };
 		65F8F1642636B2FA00E2A6DD /* NSString+VTRegexp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+VTRegexp.h"; sourceTree = "<group>"; };
 		65F8F1652636B2FA00E2A6DD /* NSString+VTRegexp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+VTRegexp.m"; sourceTree = "<group>"; };
-		65FD5674267C2DBA0019D5F7 /* NSData+XorEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+XorEncrypt.m"; sourceTree = "<group>"; };
-		65FD5675267C2DBA0019D5F7 /* NSData+XorEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+XorEncrypt.h"; sourceTree = "<group>"; };
+		65FD5674267C2DBA0019D5F7 /* NSData+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encrypt.m"; sourceTree = "<group>"; };
+		65FD5675267C2DBA0019D5F7 /* NSData+Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encrypt.h"; sourceTree = "<group>"; };
 		6BC863CB2798EE3100481C38 /* UIImage+Bitmap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Bitmap.h"; sourceTree = "<group>"; };
 		6BC863CC2798EE3100481C38 /* UIImage+Bitmap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Bitmap.m"; sourceTree = "<group>"; };
 		6BC863CE2798FC1500481C38 /* MSYH.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSYH.ttf; sourceTree = "<group>"; };
@@ -198,8 +198,8 @@
 				6504671E264A75B700B1FEEA /* UIView+Additional.m */,
 				65046729264B81DE00B1FEEA /* UIDevice+Additional.h */,
 				6504672A264B81DE00B1FEEA /* UIDevice+Additional.m */,
-				65FD5675267C2DBA0019D5F7 /* NSData+XorEncrypt.h */,
-				65FD5674267C2DBA0019D5F7 /* NSData+XorEncrypt.m */,
+				65FD5675267C2DBA0019D5F7 /* NSData+Encrypt.h */,
+				65FD5674267C2DBA0019D5F7 /* NSData+Encrypt.m */,
 				6522028E26E21D0300AC71B1 /* NSObject+Additional.h */,
 				6522028F26E21D0300AC71B1 /* NSObject+Additional.m */,
 				6BC863CB2798EE3100481C38 /* UIImage+Bitmap.h */,
@@ -363,7 +363,7 @@
 				6504671F264A75B700B1FEEA /* UIView+Additional.m in Sources */,
 				6504671A2644D9BA00B1FEEA /* UIImage+QRCode.m in Sources */,
 				65F8F0FB26300AD900E2A6DD /* SceneDelegate.m in Sources */,
-				65FD5676267C2DBA0019D5F7 /* NSData+XorEncrypt.m in Sources */,
+				65FD5676267C2DBA0019D5F7 /* NSData+Encrypt.m in Sources */,
 				65F8F1662636B2FA00E2A6DD /* NSString+VTRegexp.m in Sources */,
 				65F8F13626300BB800E2A6DD /* UIAlertController+VTAlert.m in Sources */,
 			);

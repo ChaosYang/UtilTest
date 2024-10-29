@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSData (XorEncrypt)
+@interface NSData (Encrypt)
 // 解密
 - (NSData *)xor_decryptWithKey:(NSString *)key;
 // 加密

@@ -6,9 +6,9 @@
 //  Copyright © 2020 LP. All rights reserved.
 //
 
-#import "NSData+XorEncrypt.h"
+#import "NSData+Encrypt.h"
 
-@implementation NSData (XorEncrypt)
+@implementation NSData (Encrypt)
 
 NSString *privateKey = @"efdjksg42oss24f3s";
 
